@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oppy Uptime Tracker</title>
+    <style>
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.form-container {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    box-sizing: border-box;
+    position: relative;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+.form-container::before {
+    content: '';
+    display: block;
+    height: 15px;
+    background-color: #d5fe9d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+h5 {
+    font-weight: 80;
+    text-align: center;
+    color: black;
+}
+label, input, select, textarea {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="text"], input[type="date"], select, textarea {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 12px;
+}
+.submit-button {
+    background-color: #d5fe9d;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%;
+}
+.footer {
+    text-align: left;
+    margin-top: 20px;
+    color: black;
+    font-size: 10px;
+}
+
+/* ✅ Pop-up modal overlay */
+#success-popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ Pop-up card */
+#success-popup .popup-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+#success-popup .popup-content::before {
+    content: '';
+    display: block;
+    height: 15px;
+    background-color: #d5fe9d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+#success-popup h2 {
+    margin-top: 20px;
+}
+#success-popup p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+#success-popup .footer {
+    font-size: 10px;
+    margin-top: 10px;
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Oppy Status</h1>
+        <h5>This form is designed to document the status of the Oppys for identifying their current state on a previous date.</h5>
+        <form id="myForm" action="https://script.google.com/macros/s/AKfycbzb9E9cORgj8-KKgyDoYei4coPl_F5M5GPidJIFtgiaH7T8d20zLa6YNrBazYQzni3u/exec" method="POST">
+            <label for="shiftfield"><b>Shift Date:</b></label>
+            <input type="date" id="shiftfield" name="shiftfield" required><br><br>
+
+        <label for="shifttime"><b>Shift Time</b></label><br>
+            <select id="shifttime" name="shifttime" required>
+                <option value="9:00AM - 6:00PM">9:00AM - 6:00PM</option>
+			
+			<label for="perdropdown"><b>Personnel Name</b></label><br>
+            <select id="perdropdown" name="perdropdown" required>
+                <option value="Mark Wells">Mark Wells</option>
+                <option value="Dalyn Pawaan">Dalyn Pawaan</option>
+                <option value="Remus Alfajarado">Remus Alfajarado</option>
+                <option value="Sai Adventurado">Sai Adventurado</option>
+                <option value="Lou Van Erick Piansay">Lou Van Erick Piansay</option>
+                <option value="Vince Javier">Vince Javier</option>
+                <option value="Jazer Demdam">Jazer Demdam</option>
+                <option value="Prince Elardo">Prince Elardo</option>
+                <option value="Laurence Lamera">Laurence Lamera</option>
+                <option value="Anec Jun Monreal">Anec Jun Monreal</option>
+                <option value="Neil Sumayang">Neil Sumayang</option>
+                <option value="Ciane Francis Villegas">Ciane Francis Villegas</option>
+                <option value="Mark John Torralba">Mark John Torralba</option>
+                <option value="Karlos Nicolas Mendoza">Karlos Nicolas Mendoza</option>
+                <option value="Drein Kyle Ponsaran">Drein Kyle Ponsaran</option>	
+                <option value="Kristoffer Kim Balbanida">Kristoffer Kim Balbanida</option>				
+                <option value="Katherine Latoza">Katherine Latoza</option>		
+                <option value="Marriane Sinajon">Marriane Sinajon</option>
+                <option value="James Martin Aguirre">James Martin Aguirre"</option> 
+                <option value="Reylan Sumagaysay">Reylan Sumagaysay</option>	
+                <option value="Arlha Mae Legada">Arlha Mae Legada</option>
+                <option value="Daniel Engelo Bautista">Daniel Engelo Bautista</option>
+                <option value="Roshan Louise Saluna">Roshan Louise Saluna</option>
+                <option value="Wilfred Dorilag">Wilfred Dorilag</option>
+                <option value="Kenshin Vai Rojas">Kenshin Vai Rojas</option>				
+            </select><br><br>
+            
+            <label for="oppydropdown"><b>Oppy</b></label><br>
+            <select id="oppydropdown" name="oppydropdown" required>
+                <option value="Oppy 0">Oppy 0</option>
+                <option value="Oppy 1">Oppy 1</option>  
+                <option value="Oppy 2">Oppy 2</option>
+                <option value="Oppy 3">Oppy 3</option>                
+                <option value="Oppy 4">Oppy 4</option>
+                <option value="Oppy 5">Oppy 5</option>  
+                <option value="Oppy 6">Oppy 6</option>
+                <option value="Oppy 7">Oppy 7</option>  
+                <option value="Oppy 8">Oppy 8</option>  
+                <option value="Oppy 9">Oppy 9</option>
+                <option value="Oppy 10">Oppy 10</option>
+                <option value="Oppy 11">Oppy 11</option>     
+                <option value="Oppy 12">Oppy 12</option>     
+                <option value="Oppy 13">Oppy 13</option>     
+                <option value="Oppy 14">Oppy 14</option>     
+                <option value="Oppy 15">Oppy 15</option>
+				<option value="Oppy 16">Oppy 16</option>
+                <option value="Oppy 17">Oppy 17</option>     
+                <option value="Oppy 18">Oppy 18</option>     
+                <option value="Oppy 19">Oppy 19</option>     
+                <option value="Oppy 20">Oppy 20</option>     
+                <option value="Oppy 21">Oppy 21</option>
+	            <option value="Oppy 22">Oppy 22</option>     
+                <option value="Oppy 23">Oppy 23</option>     
+                <option value="Oppy 24">Oppy 24</option>     
+                <option value="Oppy 25">Oppy 25</option>     
+				<option value="Oppy 26">Oppy 26</option>
+				<option value="Oppy 27">Oppy 27</option>
+				<option value="Oppy 28">Oppy 28</option>
+				<option value="Oppy 29">Oppy 29</option>
+				<option value="Oppy 30">Oppy 30</option>
+				<option value="Oppy 31">Oppy 31</option>
+				<option value="Oppy 32">Oppy 32</option>
+				<option value="Oppy 33">Oppy 33</option>
+				<option value="Oppy 34">Oppy 34</option>
+				<option value="Oppy 35">Oppy 35</option>
+				<option value="Oppy 36">Oppy 36</option>
+				<option value="Oppy 37">Oppy 37</option>
+				<option value="Oppy 38">Oppy 38</option>
+				<option value="Oppy 39">Oppy 39</option>
+				<option value="Oppy 40">Oppy 40</option>
+				<option value="Oppy 41">Oppy 41</option>
+				<option value="Oppy 42">Oppy 42</option>
+				<option value="Oppy 43">Oppy 43</option>
+				<option value="Oppy 44">Oppy 44</option>
+				<option value="Oppy 45">Oppy 45</option>
+				<option value="Oppy 46">Oppy 46</option>
+				<option value="Oppy 47">Oppy 47</option>
+				<option value="Oppy 48">Oppy 48</option>
+				<option value="Oppy 49">Oppy 49</option>
+				<option value="Oppy 50">Oppy 50</option>
+				<option value="Oppy 51">Oppy 51</option>
+				<option value="Oppy 52">Oppy 52</option>
+				<option value="Oppy 53">Oppy 53</option>
+				<option value="Oppy 54">Oppy 54</option>
+				<option value="Oppy 55">Oppy 55</option>
+				<option value="Oppy 56">Oppy 56</option>
+				<option value="Oppy 57">Oppy 57</option>
+				<option value="Oppy 58">Oppy 58</option>
+				<option value="Oppy 59">Oppy 59</option>
+				<option value="Oppy 60">Oppy 60</option>
+				<option value="Oppy 61">Oppy 61</option>
+				<option value="Oppy 62">Oppy 62</option>
+				<option value="Oppy 63">Oppy 63</option>
+				<option value="Oppy 64">Oppy 64</option>
+				<option value="Oppy 65">Oppy 65</option>
+				<option value="Oppy 66">Oppy 66</option>
+				<option value="Oppy 67">Oppy 67</option>
+				<option value="Oppy 68">Oppy 68</option>
+				<option value="Oppy 69">Oppy 69</option>
+				<option value="Oppy 70">Oppy 70</option>
+				<option value="Oppy 71">Oppy 71</option>
+				<option value="Oppy 72">Oppy 72</option>
+				<option value="Oppy 73">Oppy 73</option>
+				<option value="Oppy 74">Oppy 74</option>
+				<option value="Oppy 75">Oppy 75</option>
+				<option value="Oppy 76">Oppy 76</option>
+				<option value="Oppy 77">Oppy 77</option>
+				<option value="Oppy 78">Oppy 78</option>
+				<option value="Oppy 79">Oppy 79</option>
+				<option value="Oppy 80">Oppy 80</option>
+				<option value="Oppy 81">Oppy 81</option>
+				<option value="Oppy 82">Oppy 82</option>
+				<option value="Oppy 83">Oppy 83</option>
+				<option value="Oppy 84">Oppy 84</option>
+				<option value="Oppy 85">Oppy 85</option>
+				<option value="Oppy 86">Oppy 86</option>
+				<option value="Oppy 87">Oppy 87</option>
+				<option value="Oppy 88">Oppy 88</option>
+				<option value="Oppy 89">Oppy 89</option>
+				<option value="Oppy 90">Oppy 90</option>
+				<option value="Oppy 91">Oppy 91</option>
+				<option value="Oppy 92">Oppy 92</option>
+				<option value="Oppy 93">Oppy 93</option>
+				<option value="Oppy 94">Oppy 94</option>
+				<option value="Oppy 95">Oppy 95</option>
+				<option value="Oppy 96">Oppy 96</option>
+				<option value="Oppy 97">Oppy 97</option>
+				<option value="Oppy 98">Oppy 98</option>
+				<option value="Oppy 99">Oppy 99</option>
+				<option value="Oppy 100">Oppy 100</option>
+            </select> <br><br>
+
+            <label for="ewedropdown"><b>Ewelink</b></label><br>
+            <select id="ewedropdown" name="ewedropdown" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>  
+            </select> <br><br>
+
+            <label for="ringdropdown"><b>Ring</b></label><br>
+            <select id="ringdropdown" name="ringdropdown" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>  
+            </select> <br><br>
+
+            <label for="unitreedropdown"><b>Unitree</b></label><br>
+            <select id="unitreedropdown" name="unitreedropdown" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>  
+            </select> <br><br>
+
+            <label for="doghouse"><b>Dog House</b></label><br>
+            <select id="doghouse" name="doghouse" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>  
+            </select> <br><br>
+
+            <label for="oppyuptime"><b>Oppy Uptime Hours (i.e 6.00)</b></label><br>
+            <textarea id="oppyuptime" name="oppyuptime" required></textarea><br><br>   
+
+            <label for="statusdropdown"><b>Status</b></label><br>
+            <select id="statusdropdown" name="statusdropdown" required>
+                <option value="Working">Working</option>
+                <option value="Malfunction">Malfunction</option>  
+                <option value="Overheating">Overheating</option>
+                <option value="Offline">Offline</option> 
+                <option value="Low Battery">Low Battery</option>
+            </select> <br><br>
+
+            <label for="error"><b>Errors and performance issues (please specify)</b></label><br>
+            <textarea id="error" name="error" required></textarea><br><br>            
+
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+
+    <!-- ✅ Success Pop-up Modal -->
+    <div id="success-popup">
+        <div class="popup-content">
+            <h2>Log Book</h2>
+            <p><b>Undaunted Mission Control Center</b></p>
+            <p>✅ Thank you! Your log has been recorded.</p>
+            <div class="footer">
+                Created by:<br>
+                Ralph Lawrence Villamor | Team Lead - Mission Control Center
+            </div>
+        </div>
+    </div>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    var form = event.target;
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById("success-popup").style.display = "flex"; // ✅ show popup
+            form.style.display = "none"; // ✅ hide form like in 1st code
+        } else {
+            alert("❌ Something went wrong. Please try again.");
+        }
+    }).catch(error => {
+        alert("⚠️ Error submitting form. Please check your connection.");
+    });
+});
+</script>
+</body>
+</html>

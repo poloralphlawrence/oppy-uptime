@@ -137,12 +137,43 @@ input[type="text"], input[type="date"], select, textarea {
 
         <label for="shifttime"><b>Shift Time</b></label><br>
             <select id="shifttime" name="shifttime" required>
-                <option value="9:00AM - 6:00PM">9:00AM - 6:00PM</option>
+				<option value="1:00AM - 9:00AM">1:00AM - 9:00AM</option>
+				<option value="1:00PM - 1:00AM">1:00PM - 1:00AM</option>
+				<option value="11:00AM - 11:00PM">11:00AM - 11:00PM</option>
+				<option value="11:00PM - 11:00AM">11:00PM - 11:00AM</option>
+				<option value="11:00PM - 7:00AM">11:00PM - 7:00AM</option>
+				<option value="3:00PM - 11:00PM">3:00PM - 11:00PM</option>
+				<option value="4:00PM - 12:00AM">4:00PM - 12:00AM</option>
+				<option value="5:00PM - 1:00AM">5:00PM - 1:00AM</option>
+				<option value="6:00PM - 1:00AM">6:00PM - 1:00AM</option>
+				<option value="6:00PM - 2:00AM">6:00PM - 2:00AM</option>
+				<option value="7:00AM - 3:00PM">7:00AM - 3:00PM</option>
+				<option value="9:00AM - 5:00PM">9:00AM - 5:00PM</option>
+				<option value="9:00PM - 5:00AM">9:00PM - 5:00AM</option>
 			</select><br><br>
 
         <label for="site"><b>Site</b></label><br>
             <select id="site" name="site" required>
-                <option value="Perennial - Vela Park">Perennial - Vela Park</option>
+				 <option value="111 Moreland">111 Moreland</option>
+				 <option value="Atlanta Metro Studios">Atlanta Metro Studios</option>
+				 <option value="Balfour - 2000 Oasis">Balfour - 2000 Oasis</option>
+				 <option value="Balfour - 445 Cleveland">Balfour - 445 Cleveland</option>
+				 <option value="Balfour - Bradford">Balfour - Bradford</option>
+				 <option value="Balfour - Eastlake Gardens">Balfour - Eastlake Gardens</option>
+				 <option value="Balfour - Gardens at Washington Park">Balfour - Gardens at Washington Park</option>
+				 <option value="Balfour - Peachtree">Balfour - Peachtree</option>
+				 <option value="Brasfield & Gorrie">Brasfield & Gorrie</option>
+				 <option value="Collier Heights">Collier Heights</option>
+				 <option value="Cookie Factory">Cookie Factory</option>
+				 <option value="GE Loft">GE Loft</option>
+				 <option value="Perennial - Vela Park">Perennial - Vela Park</option>
+				 <option value="Reynoldstown Commons">Reynoldstown Commons</option>
+				 <option value="South Downtown">South Downtown</option>
+				 <option value="StoreMyTruck - Brumbly">StoreMyTruck - Brumbly</option>
+				 <option value="StoreMytruck - Jonesboro">StoreMytruck - Jonesboro</option>
+				 <option value="StoreMytruck - Sawtel">StoreMytruck - Sawtel</option>
+				 <option value="Stryant - Atlanta Motel">Stryant - Atlanta Motel</option>
+				 <option value="Terminal South">Terminal South</option>
 			</select><br><br>		
 			
 			<label for="perdropdown"><b>Personnel Name</b></label><br>
@@ -165,7 +196,7 @@ input[type="text"], input[type="date"], select, textarea {
                 <option value="Kristoffer Kim Balbanida">Kristoffer Kim Balbanida</option>				
                 <option value="Katherine Latoza">Katherine Latoza</option>		
                 <option value="Marriane Sinajon">Marriane Sinajon</option>
-                <option value="James Martin Aguirre">James Martin Aguirre"</option> 
+                <option value="James Martin Aguirre">James Martin Aguirre</option> 
                 <option value="Reylan Sumagaysay">Reylan Sumagaysay</option>	
                 <option value="Arlha Mae Legada">Arlha Mae Legada</option>
                 <option value="Daniel Engelo Bautista">Daniel Engelo Bautista</option>
@@ -315,9 +346,25 @@ input[type="text"], input[type="date"], select, textarea {
                 <option value="Low Battery">Low Battery</option>
             </select> <br><br>
 
-            <label for="error"><b>Errors and performance issues (please specify)</b></label><br>
-            <textarea id="error" name="error" required></textarea><br><br>            
-
+            <label for="error"><b>Errors</b></label><br>
+            <select id="error" name="error" required>
+                <option value="Charging Pad">Charging Pad</option>           
+                <option value="AC Unit">AC Unit</option>
+                <option value="Door Control">Door Control</option>
+                <option value="Robot Charging Brick">Robot Charging Brick</option>
+                <option value="Router Offline">Router Offline</option>
+                <option value="Loose Wiring (Payload)">Loose Wiring (Payload)</option>		
+				<option value="Loose Wiring (Dog House)">Loose Wiring Dog House</option>
+		        <option value="Signal Deadzone">Signal Deadzone</option>	
+	            <option value="Door Hinges">Door Hinges</option>		
+                <option value="Offline Outside Dog House">Offline Outside Dog House</option>
+                <option value="Ring Offline">Ring Offline</option>
+                <option value="Unitree Connection Issue">Unitree Connection Issue</option>
+                <option value="Ring Detachment Issue">Ring Detachment Issue</option>
+                <option value="Zero Percent Battery (0% Error)">Zero Percent Battery (0% Error)</option>				
+                <option value="Broken Dog House">Broken Dog House</option>
+            </select> <br><br>
+			
             <input type="submit" value="Submit" class="submit-button">
         </form>
     </div>

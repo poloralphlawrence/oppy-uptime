@@ -131,7 +131,7 @@ input[type="text"], input[type="date"], select, textarea {
     <div class="form-container">
         <h1>Oppy Uptime Tracker</h1>
         <h5>This form is designed to document the status of the Oppys for identifying their current state on a previous date.</h5>
-        <form id="myForm" action="https://script.google.com/macros/s/AKfycbzTqQRPjIipZai89Ql0gCA-wJK94hD5POb1kEmyvsniDoaTziZS3oDxByzf348HmchS/exec" method="POST">
+        <form id="myForm" action="https://script.google.com/macros/s/AKfycbzFj24oMXwnfvRueYP_p5RS6biBO0FLtQWypTDpPENa9QNJX8sNbC5KWZVAc8WsLVDM/exec" method="POST">
             <label for="shiftfield"><b>Shift Date:</b></label>
             <input type="date" id="shiftfield" name="shiftfield" required><br><br>
 
@@ -364,6 +364,9 @@ input[type="text"], input[type="date"], select, textarea {
                 <option value="Zero Percent Battery (0% Error)">Zero Percent Battery (0% Error)</option>				
                 <option value="Broken Dog House">Broken Dog House</option>
             </select> <br><br>
+
+            <label for="othererrors"><b>Notes and Other Errors</b></label><br>
+            <textarea id="othererrors" name="othererrors" required></textarea><br><br>     
 			
             <input type="submit" value="Submit" class="submit-button">
         </form>

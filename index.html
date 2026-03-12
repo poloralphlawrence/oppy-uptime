@@ -137,6 +137,7 @@ input[type="text"], input[type="date"], select, textarea {
 
         <label for="shifttime"><b>Shift Time</b></label><br>
             <select id="shifttime" name="shifttime" required>
+				<option value=""></option>
 				<option value="1:00AM - 9:00AM">1:00AM - 9:00AM</option>
 				<option value="1:00PM - 1:00AM">1:00PM - 1:00AM</option>
 				<option value="11:00AM - 11:00PM">11:00AM - 11:00PM</option>
@@ -154,6 +155,7 @@ input[type="text"], input[type="date"], select, textarea {
 
         <label for="site"><b>Site</b></label><br>
             <select id="site" name="site" required>
+				<option value=""></option>				
 				 <option value="111 Moreland">111 Moreland</option>
 				 <option value="Atlanta Metro Studios">Atlanta Metro Studios</option>
 				 <option value="Balfour - 2000 Oasis">Balfour - 2000 Oasis</option>
@@ -178,7 +180,8 @@ input[type="text"], input[type="date"], select, textarea {
 			
 			<label for="perdropdown"><b>Personnel Name</b></label><br>
             <select id="perdropdown" name="perdropdown" required>
-                <option value="Mark Wells">Mark Wells</option>
+				<option value=""></option>                
+				<option value="Mark Wells">Mark Wells</option>
                 <option value="Dalyn Pawaan">Dalyn Pawaan</option>
                 <option value="Sai Adventurado">Sai Adventurado</option>
                 <option value="Lou Van Erick Piansay">Lou Van Erick Piansay</option>
@@ -207,7 +210,8 @@ input[type="text"], input[type="date"], select, textarea {
             
             <label for="oppydropdown"><b>Oppy</b></label><br>
             <select id="oppydropdown" name="oppydropdown" required>
-                <option value="Oppy 0">Oppy 0</option>
+				<option value=""></option>                
+				<option value="Oppy 0">Oppy 0</option>
                 <option value="Oppy 1">Oppy 1</option>  
                 <option value="Oppy 2">Oppy 2</option>
                 <option value="Oppy 3">Oppy 3</option>                
@@ -312,25 +316,29 @@ input[type="text"], input[type="date"], select, textarea {
 
             <label for="ewedropdown"><b>Ewelink</b></label><br>
             <select id="ewedropdown" name="ewedropdown" required>
-                <option value="Yes">Yes</option>
+				<option value=""></option>				
+				<option value="Yes">Yes</option>
                 <option value="No">No</option>  
             </select> <br><br>
 
             <label for="ringdropdown"><b>Ring</b></label><br>
             <select id="ringdropdown" name="ringdropdown" required>
-                <option value="Yes">Yes</option>
+ 				<option value=""></option>
+				<option value="Yes">Yes</option>
                 <option value="No">No</option>  
             </select> <br><br>
 
             <label for="unitreedropdown"><b>Unitree</b></label><br>
             <select id="unitreedropdown" name="unitreedropdown" required>
-                <option value="Yes">Yes</option>
+				<option value=""></option>
+				<option value="Yes">Yes</option>
                 <option value="No">No</option>  
             </select> <br><br>
 
             <label for="doghouse"><b>Dog House</b></label><br>
             <select id="doghouse" name="doghouse" required>
-                <option value="Yes">Yes</option>
+				<option value=""></option>
+				<option value="Yes">Yes</option>
                 <option value="No">No</option>  
             </select> <br><br>
 
@@ -339,7 +347,8 @@ input[type="text"], input[type="date"], select, textarea {
 
             <label for="statusdropdown"><b>Status</b></label><br>
             <select id="statusdropdown" name="statusdropdown" required>
-                <option value="Working">Working</option>
+				<option value=""></option>              
+				<option value="Working">Working</option>
                 <option value="Malfunction">Malfunction</option>  
                 <option value="Overheating">Overheating</option>
                 <option value="Offline">Offline</option> 
@@ -347,8 +356,9 @@ input[type="text"], input[type="date"], select, textarea {
             </select> <br><br>
 
             <label for="error"><b>Errors</b></label><br>
-            <select id="error" name="error" required>
-                <option value="Charging Pad">Charging Pad</option>           
+            <select id="error" name="error">
+				<option value=""></option>               
+				<option value="Charging Pad">Charging Pad</option>           
                 <option value="AC Unit">AC Unit</option>
                 <option value="Door Control">Door Control</option>
                 <option value="Robot Charging Brick">Robot Charging Brick</option>
@@ -366,7 +376,7 @@ input[type="text"], input[type="date"], select, textarea {
             </select> <br><br>
 
             <label for="othererrors"><b>Notes and Other Errors</b></label><br>
-            <textarea id="othererrors" name="othererrors" required></textarea><br><br>     
+            <textarea id="othererrors" name="othererrors"></textarea><br><br>     
 			
             <input type="submit" value="Submit" class="submit-button">
         </form>
